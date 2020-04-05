@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">JetsonFinder</string>
+    <string name="search_object">Search object</string>
+    <string name="exit">Exit</string>
+    <string name="config_tcp_ip">Config TCP_IP</string>
+    <string name="start">Start</string>
+    <string name="sava_config_file">Sava config file</string>
+    <string name="host">Host</string>
+    <string name="port">Port</string>
+    <string name="default_port">1998</string>
+    <string name="default_host">192.168.1.5</string>
+    <string-array name="host_array">
+        <item>192.168.1.5</item>
+    </string-array>
+</resources>
