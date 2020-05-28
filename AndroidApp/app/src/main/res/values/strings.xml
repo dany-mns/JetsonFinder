@@ -9,6 +9,7 @@
     <string name="port">Port</string>
     <string name="default_port">1998</string>
     <string name="default_host">192.168.1.5</string>
+    <string name="press_button_to_speech_something">Press button to speech something</string>
     <string-array name="host_array">
         <item>192.168.1.5</item>
     </string-array>

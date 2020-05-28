@@ -4,14 +4,14 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognizerIntent
+import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.io.BufferedReader
-import java.io.IOException
 import java.io.PrintWriter
-import java.net.Socket
 import java.util.*
 
 class StartConnection : AppCompatActivity() {
@@ -20,10 +20,10 @@ class StartConnection : AppCompatActivity() {
     private val input: BufferedReader? = null
 
     private val REQUEST_CODE_SPEECH_INPUT = 100
-    private lateinit var txtView: TextView
-    private var HOST = "192.168.1.5"
+    private lateinit var imageView: ImageView
+    private var HOST = "192.168.0.101"
     private var PORT = 1998
-    private val th: ThreadingTcp = ThreadingTcp(HOST, PORT)
+    private lateinit var th: ThreadingTcp
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,20 +33,22 @@ class StartConnection : AppCompatActivity() {
         val extras = intent.extras
         if(extras != null) {
             HOST = extras.getString("host").toString()
-            PORT = extras.getInt("port")
+            PORT = extras.getInt("port").toInt()
+            Log.d("myapp", HOST)
         }
 
+        th = ThreadingTcp(HOST, PORT)
 
-        txtView = findViewById(R.id.txtReceive)
-        th.receiveMessage()
+        imageView = findViewById(R.id.imgJsEye)
+        th.setImage(imageView)
+
         val btnSpeech: Button = findViewById(R.id.btnSpeech)
         btnSpeech.setOnClickListener {
+//            th.getResource("IMG")
             speak()
         }
 
     }
-
-
 
     private fun speak() {
         try{
@@ -68,7 +70,7 @@ class StartConnection : AppCompatActivity() {
                     val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
                     val txtSpeech: TextView = findViewById(R.id.txtSpeech)
                     txtSpeech.text = result[0]
-                    th.sendMessage(result[0])
+                    th.getResource(result[0])
                 }
             }
         }
