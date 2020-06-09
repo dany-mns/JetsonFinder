@@ -12,10 +12,10 @@ Jetson car able to find objects, controlled through remote voice control using a
 > Jetson
 
 <p align="center">
-<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/bBIJMmC.jpg" title="JF" alt="VS" width = 250px height=400px></a>
-<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/gKv5xn0.jpg" title="JF" alt="VS" width = 250px height=400px></a> 
-<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/yDSryvY.jpg" title="JF" alt="VS" width = 250px height=400px></a> 
-<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/wiDhZBz.jpg" title="JF" alt="VS" width = 700px height=600px></a> 
+<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/bBIJMmC.jpg" title="JF" alt="VS"></a>
+<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/gKv5xn0.jpg" title="JF" alt="VS"></a> 
+<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/yDSryvY.jpg" title="JF" alt="VS"></a> 
+<a href="https://github.com/dannymanastireanu/JetsonFinder"><img src="https://i.imgur.com/wiDhZBz.jpg" title="JF" alt="VS"></a> 
 </p>
 
 
